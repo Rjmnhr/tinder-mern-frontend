@@ -18,7 +18,7 @@ export const RegisterForm = () => {
       body: JSON.stringify({ name, email, age, img_URL }),
     })
       .then((response) => {
-        const data = response.json();
+        const data = response;
         console.log(data);
         alert("Signed up successfully!");
         setName("");
@@ -76,6 +76,20 @@ export const RegisterForm = () => {
         </div>
         <button type="submit">REGISTER</button>
       </form>
+      <p style={{ color: "white" }}>
+        If you don't have an image URL create at
+        <span>
+          {" "}
+          <a
+            href="https://image-host.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            ImageHost{" "}
+          </a>
+        </span>
+      </p>
     </>
   );
 };
